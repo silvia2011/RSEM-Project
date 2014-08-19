@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>RSEM Project</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!-- some elementary styling -->
+    <link rel="stylesheet" type="text/css" href="css/final_project.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/search_filter.js"></script>
+</head>
+<body id="main">
+
+	<h1>SChang Final Project</h1>
+	<form name="main_form" id="main_form" action="upload_example2.cgi" method="post" enctype="multipart/form-data">
+		<p><input id="filename" name="filename" type="file" autofocus="autofocus" multiple="true" placeholder="First file"/></p>
+		<p><input id="filename" name="filename" type="file"  multiple="true" placeholder="Second file"/></p>
+		<p><input name="submit" type="submit" value="Submit"/></p>
+	</form>
+
+	<section id="search">
+		<div id="progressbar"></div>
+ 
+		<script>
+		$( "#progressbar" ).progressbar({ value: false});
+
+		</script>
+		<br>
+		<form id="search_id" action=""> 
+			<input id="search_gene_id" type="search" value="" autofocus="autofocus" placeholder="Enter gene/transcript ID" size="40" maxlength="80"/>
+			<input id="find" type="submit" value="Find"/>
+		</form>
+		<p>
+			<span id="match_count">0</span> match(es) found.
+		</p>
+		<table>
+			<thead>
+			<tr>
+				<td>Gene ID</td>
+				<td>Transcript ID</td>
+				<td>Isoform %</td>
+				<td>Gene_TPM</td>
+				<td>Trans_TPM</td>
+				<td>Gene_FPKM</td>
+				<td>Trans_FPKM</td>
+			</tr>
+			</thead>
+			<tbody>
+				<!-- Filled by javascript results -->
+			</tbody>
+	</section>
+</body>
+
+</html>
