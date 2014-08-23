@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>SChang Final Project</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!-- some elementary styling -->
+    <link rel="stylesheet" type="text/css" href="css/final_project.css" />
+
+</head>
+
+<body id="main">
+	<h1>RNA-Seq Assembly Search/Filter Utility</h1>
+	<h2>Upload Files</h2>
+	<form name="main_form" id="main_form" action="upload_process_db.cgi" method="post" enctype="multipart/form-data">
+		<p>Isoforms File: <input id="filename1" name="filename" type="file" autofocus="autofocus" multiple="true"/></p>
+		<p>Genes File: <input id="filename2" name="filename" type="file"  multiple="true"/></p>
+		<p><input name="submit" type="submit" value="Submit"/></p>
+	</form>
+
+</body>
+
+</html>
